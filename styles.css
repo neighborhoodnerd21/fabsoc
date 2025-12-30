@@ -1,0 +1,42 @@
+.text-shadow-1 {
+  text-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.25);
+}
+
+.card-cover {
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+}
+
+.fade-in-text-1 {
+  opacity: 0; /* Start completely transparent */
+  animation: fadeIn 2s forwards; /* Apply the animation */
+  animation-delay: 1s; /* Wait for 1 second before starting */
+}
+
+.fade-in-text-2 {
+  opacity: 0; /* Start completely transparent */
+  animation: fadeIn 2s forwards; /* Apply the animation */
+  animation-delay: 2s; /* Wait for 1 second before starting */
+}
+
+.fade-in-text-3 {
+  opacity: 0; /* Start completely transparent */
+  animation: fadeIn 2s forwards; /* Apply the animation */
+  animation-delay: 3s; /* Wait for 1 second before starting */
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.icon-square {
+  width: 3rem;
+  height: 3rem;
+  border-radius: 0.75rem;
+}
