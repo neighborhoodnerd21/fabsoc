@@ -1,3 +1,9 @@
+.banner-background {
+  background-image: url("./src/mobile_banner.webp");
+  background-size: cover;
+  background-position: center;
+}
+
 .text-shadow-1 {
   text-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.25);
 }
@@ -26,6 +32,12 @@
   animation-delay: 3s; /* Wait for 1 second before starting */
 }
 
+.icon-square {
+  width: 3rem;
+  height: 3rem;
+  border-radius: 0.75rem;
+}
+
 @keyframes fadeIn {
   0% {
     opacity: 0;
@@ -35,8 +47,9 @@
   }
 }
 
-.icon-square {
-  width: 3rem;
-  height: 3rem;
-  border-radius: 0.75rem;
+@media (min-width: 768px) {
+  .banner-background {
+    background: no-repeat url("./src/banner.webp");
+    background-size: cover;
+  }
 }
