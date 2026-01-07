@@ -73,14 +73,14 @@
     background-position-x: 100%;
     animation: shimmer-animation 4s 1 linear;
   }
-}
 
-@keyframes shimmer-animation {
-  0% {
-    background-position: 100%; /* Start position (right) */
-  }
-  /* Move the background position from right to left */
-  100% {
-    background-position-x: -100%;
+  @keyframes shimmer-animation {
+    0% {
+      background-position: 100%; /* Start position (right) */
+    }
+    /* Move the background position from right to left */
+    100% {
+      background-position-x: -100%;
+    }
   }
 }
