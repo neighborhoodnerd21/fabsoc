@@ -71,7 +71,7 @@
     /* Set the initial background position far left to start the animation off-screen */
     background-size: 200% 100%;
     background-position-x: 100%;
-    animation: shimmer-animation 4s 1 linear;
+    animation: shimmer-animation 4s 1s initial linear;
   }
 
   @keyframes shimmer-animation {
