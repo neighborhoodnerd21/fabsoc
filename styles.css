@@ -51,5 +51,36 @@
   .banner-background {
     background: no-repeat url("./src/banner.webp");
     background-size: cover;
+    position: relative;
+    overflow: hidden;
+  }
+  .banner-background::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* Create a transparent-to-white gradient for the shine effect */
+    background: linear-gradient(
+      -60deg,
+      rgba(255, 255, 255, 0) 50%,
+      rgba(255, 255, 255, 0.8) 70%,
+      rgba(255, 255, 255, 0) 90%
+    );
+    /* Set the initial background position far left to start the animation off-screen */
+    background-size: 200% 100%;
+    background-position-x: 100%;
+    animation: shimmer-animation 4s 1 linear;
+  }
+}
+
+@keyframes shimmer-animation {
+  0% {
+    background-position: 100%; /* Start position (right) */
+  }
+  /* Move the background position from right to left */
+  100% {
+    background-position-x: -100%;
   }
 }
