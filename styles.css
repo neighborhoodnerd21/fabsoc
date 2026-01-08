@@ -81,15 +81,24 @@
     animation-iteration-count: initial;
     animation-timing-function: linear;
   }
+}
 
-  @keyframes shimmer-animation {
-    0% {
-      background-position: 100%; /* Start position (right) */
-    }
-    /* Move the background position from right to left */
-    100% {
-      background-position-x: -100%;
-    }
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes shimmer-animation {
+  0% {
+    background-position: 100%; /* Start position (right) */
+  }
+  /* Move the background position from right to left */
+  100% {
+    background-position-x: -100%;
   }
 }
 
