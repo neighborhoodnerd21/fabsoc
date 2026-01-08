@@ -14,46 +14,50 @@
   background-size: cover;
 }
 
-.fade-in-text-1 {
-  opacity: 0; /* Start completely transparent */
-  animation: fadeIn 2s forwards; /* Apply the animation */
-  animation-delay: 1s; /* Wait for 1 second before starting */
-}
-
-.fade-in-text-2 {
-  opacity: 0; /* Start completely transparent */
-  animation: fadeIn 2s forwards; /* Apply the animation */
-  animation-delay: 2s; /* Wait for 1 second before starting */
-}
-
-.fade-in-text-3 {
-  opacity: 0; /* Start completely transparent */
-  animation: fadeIn 2s forwards; /* Apply the animation */
-  animation-delay: 3s; /* Wait for 1 second before starting */
-}
-
 .icon-square {
   width: 3rem;
   height: 3rem;
   border-radius: 0.75rem;
 }
 
-@keyframes fadeIn {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
+.fade-in-text-1 {
+  opacity: 0;
+  animation: fadeIn 2s forwards;
+  animation-delay: 1s;
+}
+
+.fade-in-text-2 {
+  opacity: 0;
+  animation: fadeIn 2s forwards;
+  animation-delay: 2s;
+}
+.fade-in-text-3 {
+  opacity: 0;
+  animation: fadeIn 2s forwards;
+  animation-delay: 3s;
+}
+
+.slide-in-container {
+  overflow: hidden;
+}
+
+.promo {
+  animation-name: slidein;
+  animation-duration: 6s;
+  animation-fill-mode: forwards;
+  animation-delay: 0s;
+  animation-timing-function: ease-out;
 }
 
 @media (min-width: 768px) {
+  /* Set a background for banner div on large screens */
   .banner-background {
     background: no-repeat url("./src/banner.webp");
     background-size: cover;
     position: relative;
     overflow: hidden;
   }
+  /* Create an overlay for the shine effect */
   .banner-background::after {
     content: "";
     position: absolute;
@@ -75,12 +79,29 @@
   }
 }
 
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
 @keyframes shimmer-animation {
   0% {
-    background-position: 100%; /* Start position (right) */
+    background-position: 100%;
   }
-  /* Move the background position from right to left */
   100% {
     background-position-x: -100%;
+  }
+}
+
+@keyframes slidein {
+  0% {
+    transform: translateX(-100vw);
+  }
+  100% {
+    transform: translateX(0);
   }
 }
