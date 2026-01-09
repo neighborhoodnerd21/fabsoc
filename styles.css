@@ -1,3 +1,7 @@
+.banner-div {
+  height: fit-content;
+}
+
 .banner-background {
   background-image: url("./src/mobile_banner.webp");
   background-size: cover;
@@ -49,7 +53,16 @@
   animation-timing-function: ease-out;
 }
 
+@media screen and (max-width: 768px) {
+  .nav-logo {
+    display: none !important;
+  }
+}
+
 @media (min-width: 768px) {
+  .banner-div {
+    height: 350px;
+  }
   /* Set a background for banner div on large screens */
   .banner-background {
     background: no-repeat url("./src/banner.webp");
